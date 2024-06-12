@@ -6,7 +6,8 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
-  isProductVisible: boolean = false;
+ public isProductVisible: boolean = false;
+ public currentPrice: number = 10;
   constructor() {// 00
     console.log('Constructor');
   }
@@ -35,6 +36,8 @@ export class ProductComponent implements OnInit, OnChanges, DoCheck, AfterConten
     console.log();
   }
 
-
+  increasePrice(){
+    this.currentPrice++;
+  }
 
 }

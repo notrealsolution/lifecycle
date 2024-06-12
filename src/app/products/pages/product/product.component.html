@@ -1,8 +1,18 @@
 <p>
-  product works!
+  COMPONENTE PADRE***
 </p>
-<products-price-page></products-price-page>
 
-<button (click)="isProductVisible != isProductVisible">
+<products-price-page
+  *ngIf="isProductVisible"
+  [price]="currentPrice"
+/>
+
+
+<button (click)="isProductVisible = !isProductVisible">
   Toggle
 </button>
+
+<button (click)="increasePrice()">
+  +1 Price
+</button>
+
